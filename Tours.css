@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background: #f5f5f5;
+}
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.heading {
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+}
+.tour-list {
+  --column: 3;
+  --gap: 30px;
+  --spacing: calc(calc((var(--column) - 1) * var(--gap)) / var(--column));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.tour {
+  width: calc((100% / var(--column)) - var(--spacing));
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.tour-content {
+  padding: 20px 20px 14px;
+}
+.tour-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.556;
+  color: #23262f;
+}
+.tour-ratting {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-review {
+  display: flex;
+  column-gap: 3px;
+  align-items: center;
+}
+.tour-review-count {
+  font-size: 14px;
+  line-height: 27px;
+  color: #3b3e44;
+}
+.tour-duration {
+  font-size: 14px;
+  line-height: 20px;
+  color: #353945;
+}
+.tour-button {
+  font-size: 14px;
+  line-height: 17px;
+  color: #f4f5f6;
+  padding: 8px 17px 9px;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 8px;
+}
+.img1 {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  object-fit: cover;
+  height: 239px;
+}
+
+.tour-image {
+  position: relative;
+}
+.tour-image-button {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fcfcfd;
+  background: rgb(53, 57, 69, 0.8);
+  padding: 5px 16px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1023.98px) {
+  body {
+    padding: 0 24px 0;
+  }
+  .tour {
+    --column: 1;
+    margin: 0 auto;
+  }
+  .tour-title {
+    font-size: 16px;
+    margin-bottom: 11.24px;
+  }
+  .tour-content {
+    padding-top: 18px;
+    padding-left: 18px;
+  }
+  .tour-ratting {
+    margin-bottom: 11.24px;
+  }
+  .tour-review-count,
+  .tour-duration,
+  .tour-button {
+    font-size: 12px;
+  }
+  .img1 {
+    height: 211px;
+  }
+}

@@ -1,0 +1,40 @@
+include ./mixin-tours.pug
+include ./mixin_popular.pug
+include ./mixin-gems.pug
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap' rel='stylesheet')
+    title Document
+    link(rel='stylesheet' href='./Tours.css')
+    link(rel='stylesheet' href='./popular.css')
+    link(rel='stylesheet' href='./hidden-gems.css')
+
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+body    
+    section.tour-top
+        .container
+            h2.heading Top Bangkok Tours
+            .tour-list
+                +tour("https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80","Ayutthaya","From $40","Thailands Ayutthaya Temples Cruise from Bangkok","4.8 (12 reviews)")
+                +tour("https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80","Ayutthaya","From $40","FLoating Markets Day Trip from Bangkok","4.8 (12 reviews)")
+                +tour("https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80","Ayutthaya","From $40","Bangkok Dinner Cruise on the Chao Phraya River","4.8 (12 reviews)")
+    section.popular_thing
+        .container
+            h2.heading Popular things to do in Bangkok
+            .destination-list 
+                +box("https://plus.unsplash.com/premium_photo-1661766983546-c923002564a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","The Grand Palace")
+                +box("https://plus.unsplash.com/premium_photo-1661766983546-c923002564a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","Chatuchak Weekend")
+                +box("https://plus.unsplash.com/premium_photo-1661766983546-c923002564a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","Wat Pho")
+                +box("https://plus.unsplash.com/premium_photo-1661766983546-c923002564a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","Temple Of Dawn")
+    section.gems
+        .container-gems 
+            h2.heading Hidden gems in Bangkok
+            .gems-list 
+                //- each val in ["https://plus.unsplash.com/premium_photo-1661766983546-c923002564a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "https://images.unsplash.com/photo-1509564324749-471bd272e1ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80","https://images.unsplash.com/photo-1581535441906-d331533295e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80", "https://images.unsplash.com/photo-1626594166495-337c920445e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"]
+                +items("https://images.unsplash.com/photo-1509564324749-471bd272e1ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")

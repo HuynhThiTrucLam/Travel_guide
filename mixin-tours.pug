@@ -1,0 +1,15 @@
+mixin tour(image,name,price,title,review)
+    .tour
+        .tour-image
+            img.img1(src=image alt="name")
+            span.tour-image-button=price
+        .tour-content
+            h3.tour-title=title
+            .tour-ratting
+                .tour-review
+                    .tour-star
+                        i.fa-solid.fa-star(style='color: #e5df34;')
+                    .tour-review-count
+                        span=review 
+                span.tour-duration Duration: 9 hours
+            a.tour-button(href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer') Tours Price $61

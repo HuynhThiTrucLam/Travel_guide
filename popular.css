@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: rgb(73, 73, 244);
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 40px 24px;
+}
+.destination-list {
+  /* --column: 4;
+  --gap: 29px;
+  --spacing: calc(calc((var(--column) - 1) * var(--gap)) / var(--column));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap); */
+  display: grid;
+  gap: 29px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.destination {
+  background: #ffffff;
+  width: calc((100% / var(--column)) - var(--spacing));
+  box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+}
+.destination-content {
+  padding: 20px;
+}
+.destination-time {
+  display: block;
+  color: #777e90;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
+.destination-title {
+  font-size: 18px;
+  line-height: 28px;
+  color: #353945;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.destination-rating {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 21px;
+}
+.note {
+  color: #f4f5f6;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 30px;
+  padding: 4px 18px;
+  display: inline-flex;
+  bottom: 0;
+  right: 15px;
+  justify-content: center;
+  transform: translateY(50%);
+}
+.destination-picture {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+.destination-image {
+  position: relative;
+  /* height: 185px; */
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  left: 0%;
+  right: -0.37%;
+  top: 0%;
+  bottom: 5.61%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    24.19deg,
+    rgba(4, 4, 4, 0.52) 0.23%,
+    rgba(4, 4, 4, 0) 55.5%
+  );
+  border-radius: 14px 14px 0 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .destination {
+    /* width: calc(50% - 29px); */
+    width: calc((50% / var(--column)) - var(--spacing));
+    margin-bottom: 29px;
+  }
+  .destination-picture {
+    width: 100%;
+  }
+  .note {
+    transform: translateY(50%);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .destination {
+    width: 100%;
+  }
+  .destination-picture {
+    width: 100%;
+  }
+}
